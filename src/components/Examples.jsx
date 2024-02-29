@@ -1,11 +1,10 @@
 import { useState } from "react";
+import Section from "./Section";
 import { EXAMPLES } from "../data";
 import TabButton from "./TabButton";
 
 export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState("");
-
-  // let tabContent = "Please click a button";
 
   function handleSelect(selectedButton) {
     // selectedButton +> 'templets','jsx',
@@ -14,8 +13,7 @@ export default function Examples() {
     console.log(selectedTopic);
   }
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section title="Examples" id="examples">
       <menu>
         <TabButton
           isSelected={selectedTopic == "templates"}
@@ -47,6 +45,6 @@ export default function Examples() {
           </pre>
         </div>
       )}
-    </section>
+    </Section>
   );
 }
