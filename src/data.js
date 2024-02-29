@@ -58,13 +58,16 @@ export const EXAMPLES = {
         "customer":customer}
 
         returen render(request,'customer.html',context)
-       }`,
+       }
+
+       never forget importing models`,
   },
   models: {
     title: "Models",
     description:
       "Django Models is the SQL Database one uses with Django. SQL (Structured Query Language) is complex and involves a lot of different queries for creating, deleting, updating, or any other stuff related to a database.",
     code: `
+
   class Customer(model.Model)
   name=model.CharField(max_length=100)
 
