@@ -12,39 +12,43 @@ export default function Examples() {
     setSelectedTopic(selectedButton);
     console.log(selectedTopic);
   }
+
+  let tabContent = <p id="select">Please select a topic</p>;
+
+  if (selectedTopic) {
+    tabContent = (
+      <div id="tab-content">
+        <h3>{EXAMPLES[selectedTopic].title}</h3>
+        <p>{EXAMPLES[selectedTopic].description}</p>
+        <pre>
+          <code>{EXAMPLES[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
   return (
     <Section title="Examples" id="examples">
       <menu>
         <TabButton
           isSelected={selectedTopic == "templates"}
-          onSelect={() => handleSelect("templates")}
+          onClick={() => handleSelect("templates")}
         >
           Templates
         </TabButton>
         <TabButton
           isSelected={selectedTopic == "viwe"}
-          onSelect={() => handleSelect("viwe")}
+          onClick={() => handleSelect("viwe")}
         >
           Viwe
         </TabButton>
         <TabButton
           isSelected={selectedTopic == "models"}
-          onSelect={() => handleSelect("models")}
+          onClick={() => handleSelect("models")}
         >
           Models
         </TabButton>
       </menu>
-      {!selectedTopic ? (
-        <p id="select">Please select a topic</p>
-      ) : (
-        <div id="tab-content">
-          <h3>{EXAMPLES[selectedTopic].title}</h3>
-          <p>{EXAMPLES[selectedTopic].description}</p>
-          <pre>
-            <code>{EXAMPLES[selectedTopic].code}</code>
-          </pre>
-        </div>
-      )}
+      {tabContent}
     </Section>
   );
 }
