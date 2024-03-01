@@ -1,6 +1,6 @@
-import templatesImg from "./assets/templates.png";
-import viweImg from "./assets/view.png";
-import modelsImg from "./assets/models.png";
+import templatesImg from "./assets/templates.jpg";
+import viweImg from "./assets/viwe01.jpg";
+import modelsImg from "./assets/models01.jpg";
 // import stateImg from "./assets/state-mgmt.png";
 
 export const CORE_CONCEPTS = [
@@ -12,7 +12,7 @@ export const CORE_CONCEPTS = [
   },
   {
     image: viweImg,
-    title: "Viwe",
+    title: "Views",
     description:
       "Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.",
   },
