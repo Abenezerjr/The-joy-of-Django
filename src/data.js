@@ -22,12 +22,6 @@ export const CORE_CONCEPTS = [
     description:
       "Make components configurable (and therefore reusable) by passing input data to them.",
   },
-  // {
-  //   image: stateImg,
-  //   title: "State",
-  //   description:
-  //     "React-managed data which, when changed, causes the component to re-render & the UI to update.",
-  // },
 ];
 export const EXAMPLES = {
   templates: {
@@ -73,26 +67,14 @@ export const EXAMPLES = {
 
   def __str__(self):
    returen self.name
-}`,
+}   class Customer(model.Model)
+name=model.CharField(max_length=100)
+
+def __str__(self):
+ returen self.name  class Customer(model.Model)
+ name=model.CharField(max_length=100)
+
+ def __str__(self):
+  returen self.name`,
   },
-  //   state: {
-  //     title: "State",
-  //     description:
-  //       "State allows React components to change their output over time in response to user actions, network responses, and anything else.",
-  //     code: `
-  // function Counter() {
-  //   const [isVisible, setIsVisible] = useState(false);
-
-  //   function handleClick() {
-  //     setIsVisible(true);
-  //   }
-
-  //   return (
-  //     <div>
-  //       <button onClick={handleClick}>Show Details</button>
-  //       {isVisible && <p>Amazing details!</p>}
-  //     </div>
-  //   );
-  // }`,
-  //   },
 };

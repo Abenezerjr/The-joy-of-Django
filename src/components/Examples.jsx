@@ -11,7 +11,13 @@ export default function Examples() {
     setSelectedTopic(selectedButton);
   }
 
-  let tabContent = <p id="select">Please select a topic</p>;
+  let tabContent = (
+    <div id="tab-content">
+      <p id="select" style={{ color: "#fff" }}>
+        Please select a topic
+      </p>
+    </div>
+  );
 
   if (selectedTopic) {
     tabContent = (

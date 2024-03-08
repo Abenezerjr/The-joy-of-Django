@@ -9,10 +9,6 @@ export default function CoreConceptss() {
         {CORE_CONCEPTS.map((conceptItem) => (
           <CoreConcepts key={conceptItem.title} {...conceptItem} />
         ))}
-        {/* <CoreConcepts {...CORE_CONCEPTS[0]} />
-      <CoreConcepts {...CORE_CONCEPTS[1]} />
-      <CoreConcepts {...CORE_CONCEPTS[2]} /> */}
-        {/* <CoreConcepts /> */}
       </ul>
     </section>
   );
