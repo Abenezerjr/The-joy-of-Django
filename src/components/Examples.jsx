@@ -8,10 +8,7 @@ export default function Examples() {
   const [selectedTopic, setSelectedTopic] = useState("");
 
   function handleSelect(selectedButton) {
-    // selectedButton +> 'templets','jsx',
-    console.log(selectedButton);
     setSelectedTopic(selectedButton);
-    console.log(selectedTopic);
   }
 
   let tabContent = <p id="select">Please select a topic</p>;
@@ -30,7 +27,6 @@ export default function Examples() {
   return (
     <Section title="Examples" id="examples">
       <Tabs
-        // ButtonesContainer="menu"
         buttons={
           <>
             <TabButton
